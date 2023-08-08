@@ -69,7 +69,7 @@ def print_hi(name):
                 f.write(k['todo_code'].replace("```", "").replace("python", "") + "\n")
         statement = "./pycharm merge " + target_directory + file_name + " " + ai_filename + " " + target_directory + file_name
         # print(statement)
-        os.chdir("/Users/vasilisvittis/Library/Application Support/JetBrains/Toolbox/apps/PyCharm-P/ch-0/231.8770.66/PyCharm.app/Contents/MacOS")
+        os.chdir("/Users/vasilisvittis/Library/Application Support/JetBrains/Toolbox/apps/PyCharm-P/ch-0/231.9011.38/PyCharm.app/Contents/MacOS")
         os.system(statement)
         os.remove(ai_filename)
     os.rmdir(directory)
