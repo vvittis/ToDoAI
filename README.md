@@ -14,12 +14,12 @@ What we are contributing at this part of the project is an example TODO prompt f
 ### Solution Description
 The proposed approach is an end-to-end system able to support IDE's "TODO" instructions, in the JetBrain oracle. The current state of the project is a proof of concept with many limitations. The following diagram shows the steps of our system.
 
-![alt text](./doc/System_overview.pdf "Title")
+![alt text](./doc/System_overview-1.png "Title")
 
 The system first scans the designated source directory tree by looking for Python files.  At the next step, for each file it applies a set of parsing rules in order to find all TODO comments and the functions that they are referring to. After collecting all the candidate code blocks and their respective TODO comments, it calls the OpenAI API, asking to generate the code block that meets the instructions.
 
 We have carefully constructed such a prompt that guides the GPT to a more stable answer with no ambiguities in order to reduce noise. Specifically, we constructed a prompt framework to inject TODO comments into and receive both an executable code block as well as a description of changes. For each code block, we keep a history table of all answers and we discard it when the code block is resolved. The system creates a temporary folder where it stores all the temporary files that contain the generated code. When we have generated the  code blocks for all functions of each file, we show a typical diff-and-merge window that asks the user which of the changes they would like to merge.
 
-![alt text](./doc/UI.pdf "Title")
+![alt text](./doc/UI-1.png "Title")
 
 We designed it to use a familiar and tested interface in order to display the generated code changes. On the left window of Figure 2, we see the existing TODO comments with their respective functions. On the right window of same figure, we see that for each function there is a comment tagged with $TODO\_RESOLVED$ that explains to the user what changes have been made to their code and the code with the actual changes. Between these two windows and for each of the suggestions, there are a set of icons (arrow and cancel) that the user can select in order to accept or reject the changes.
