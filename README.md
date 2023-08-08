@@ -1,6 +1,6 @@
 # "To-do"code injections from natural language assignments
 Vasileios Vittis, Armand Asnani
-![Alt Text]([../doc/ezgif.com-gif-maker.gif](https://github.com/vvittis/ToDoAI/blob/master/doc/ezgif.com-gif-maker.gif))
+<img src="./doc/ezgif.com-gif-maker.gif">
 Many times in complex and extended software programs, individual software engineers generate lines of code that serve the current short-term goals of a project plan, along side with comments for
 future "to-do" assignments. These "to-do" assignments are usually simple future references for optimizations, improvements or possible changes that should be done in one or multiple functions. In
 practise, these assignments are being postponed, creating a long list of "fixes" that should be resolved in the near future. This work solves the problem when new code blocks require functionalities
